@@ -50,10 +50,10 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
 .hamburger:hover{background:var(--navy-2)}
 .hamburger[aria-expanded="true"]{background:var(--blue)}
 @media(max-width:900px){
-  .nav{position:fixed;top:0;right:0;bottom:0;width:min(280px,82vw);background:var(--navy);flex-direction:column;padding:90px 28px;transform:translateX(100%);transition:.25s;margin:0;z-index:60;gap:4px}
-  .nav.open{transform:none;box-shadow:-16px 0 40px rgba(10,33,57,.35)}
+  .nav{position:fixed;top:0;right:0;bottom:0;width:min(280px,82vw);background:var(--navy);flex-direction:column;padding:90px 28px;transform:translateX(100%);transition:.25s;margin:0;z-index:60;gap:4px}  .nav.open{transform:none;box-shadow:-16px 0 40px rgba(10,33,57,.35)}
   .nav a{color:#fff}
   .nav a.active{color:var(--mint);border-bottom-color:var(--mint)}
+  .header-right{margin-left:auto}
   .nav-cta{display:inline-flex!important;align-items:center;justify-content:center;background:var(--blue);border-radius:6px;padding:14px 20px!important;font-weight:700;margin-top:12px}
   .hamburger{display:block}
 }
