@@ -205,15 +205,25 @@
   // mobile nav
   const nav = document.getElementById('nav');
   const burger = document.getElementById('hamburger');
-  burger.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
+  const setNav = (open) => {
+    nav.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    burger.textContent = open ? '✕' : '☰';
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setNav(!nav.classList.contains('open'));
   });
-  nav.addEventListener('click', () => {
-    nav.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-    burger.setAttribute('aria-label', 'Open menu');
+  nav.addEventListener('click', (e) => {
+    if (e.target.closest('a')) setNav(false);
+  });
+  document.addEventListener('click', (e) => {
+    if (nav.classList.contains('open') && !nav.contains(e.target) && !burger.contains(e.target)) setNav(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setNav(false); burger.focus(); }
   });
 
   renderPills();
