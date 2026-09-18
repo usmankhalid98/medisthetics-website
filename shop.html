@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop — Refurbished lasers & IPL | medisthetics</title>
+  <meta name="description" content="Refurbished aesthetic lasers, IPL systems and coolers. Serviced to manufacturer standard, 3-month parts warranty, prices incl. VAT & delivery." />
+  <meta name="theme-color" content="#0A2139" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shop — Refurbished lasers & IPL | medisthetics" />
+  <meta property="og:description" content="Refurbished stock, ready for clinic. Serviced, calibrated and covered by a 3-month parts warranty." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://medisthetics.co.uk" />
+  <link rel="preconnect" href="https://images.pexels.com" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A2139'/><text x='50' y='66' font-size='52' text-anchor='middle' fill='%235F8DF0' font-family='sans-serif' font-weight='bold'>m</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">medi<span>sthetics</span><em>DELIVERING EXCELLENCE</em></a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="shop.html" aria-current="page" class="active">Shop</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="https://book.heygoldie.com/Medisthetics" target="_blank" rel="noopener" class="nav-cta">Book a service</a>
+      </nav>
+      <div class="header-right">
+        <a class="btn btn-navy btn-sm" href="https://book.heygoldie.com/Medisthetics" target="_blank" rel="noopener">Book a service</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="hero page-hero">
+      <div class="container">
+        <p class="mono eyebrow-light"><a href="index.html">HOME</a> / SHOP — REFURBISHED STOCK</p>
+        <div class="page-hero-grid">
+          <div>
+            <h1>Refurbished stock,<br>ready for clinic.</h1>
+            <p class="hero-sub">Every machine is serviced to manufacturer standard, output-verified and delivered with a service report. 3-month parts warranty. Prices incl. VAT &amp; delivery. Used systems may show minor cosmetic marks.</p>
+            <div class="hero-actions">
+              <a href="#stock" class="btn btn-blue">Browse stock</a>
+              <a href="index.html#contact" class="btn btn-ghost">Can't find it? We source</a>
+            </div>
+          </div>
+          <ul class="hero-checklist">
+            <li><strong>3-mo</strong><span>PARTS WARRANTY<br>INCLUDED</span></li>
+            <li><strong>VAT+</strong><span>PRICES INCL. VAT<br>&amp; DELIVERY</span></li>
+            <li><strong>CAL</strong><span>OUTPUT-VERIFIED<br>BEFORE DESPATCH</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STOCK -->
+    <section class="section shop shop-page" id="stock">
+      <div class="container">
+        <p class="mono section-tag"><span class="rule blue"></span>ALL MACHINES — LIVE STOCK</p>
+        <div class="shop-head">
+          <div>
+            <h2>What’s on the bench right now.</h2>
+            <p class="shop-head-sub">Stock changes as machines are refurbished and sold. Enquire on any listing — we hold service history for every unit.</p>
+          </div>
+          <p id="result-count" class="count-badge mono" aria-live="polite"></p>
+        </div>
+
+        <div class="shop-toolbar" role="search">
+          <label class="search-wrap">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Search — e.g. Lynton, Deka, Cryo" aria-label="Search machines" autocomplete="off" />
+            <button id="clear-search" class="clear-btn hidden" type="button" aria-label="Clear search">✕</button>
+          </label>
+          <div class="toolbar-right">
+            <label class="sort-wrap">
+              <span class="mono sort-label">SORT</span>
+              <select id="sort" aria-label="Sort machines">
+                <option value="featured">Featured</option>
+                <option value="low">Price: low → high</option>
+                <option value="high">Price: high → low</option>
+                <option value="az">Name: A–Z</option>
+              </select>
+            </label>
+            <button id="clear-filters" class="btn-reset hidden" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="shop-subrow">
+          <span class="mono filter-label">FILTER</span>
+          <div id="filter-pills" class="filter-pills" role="group" aria-label="Filter by tag"></div>
+        </div>
+
+        <div id="product-grid" class="product-grid" aria-live="polite"></div>
+        <div id="product-empty" class="empty hidden">
+          <p class="empty-title">No machines match your filters.</p>
+          <p class="empty-sub">Try clearing the search — or tell us what you need and we’ll source it.</p>
+          <div class="empty-actions">
+            <button id="empty-reset" class="btn btn-navy btn-sm" type="button">Clear filters</button>
+            <a href="index.html#contact" class="btn btn-ghost btn-sm empty-ghost">Contact us</a>
+          </div>
+        </div>
+        <div class="shop-foot">
+          <p class="mono">CAN’T FIND IT? <a href="index.html#contact">WE SOURCE TO ORDER →</a></p>
+          <p class="admin-hint mono">STOCK ADMIN → <a href="admin.html">ADD TITLE / IMAGE / PRICE</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASSURANCE -->
+    <section class="assurance">
+      <div class="container assurance-grid">
+        <div><span class="mono num">01</span><h3>Serviced, not just wiped down</h3><p>Full calibration, optics inspection, coolant service and electrical safety test before it leaves us.</p></div>
+        <div><span class="mono num">02</span><h3>Part-exchange welcome</h3><p>Upgrading? We take your old platform in part-exchange and handle decommissioning.</p></div>
+        <div><span class="mono num">03</span><h3>We source to order</h3><p>After something specific? Tell us the model — we find, refurbish and certify it for you.</p></div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <h2>Got a machine that needs attention?</h2>
+          <p class="contact-sub">Tell us the model and the fault. We will come back the same working day with a plan and a price.</p>
+        </div>
+        <div class="cta-side">
+          <a class="btn btn-navy" href="https://book.heygoldie.com/Medisthetics" target="_blank" rel="noopener">Book a service visit</a>
+          <p class="mono cta-line">OR CALL <a href="tel:+447458390786">07458 390786</a> · MON–FRI 08:00–18:00</p>
+          <p class="mono cta-line">OR EMAIL <a href="mailto:service@medisthetics.co.uk">service@medisthetics.co.uk</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <div class="logo light">medi<span>sthetics</span><em>DELIVERING EXCELLENCE</em></div>
+        <p>Aesthetic machines · Servicing · Support. Engineering and technical support for laser and IPL clinics across the UK and internationally.</p>
+      </div>
+      <div><p class="mono f-tag">SERVICES</p><a href="index.html#services">Pre-planned maintenance</a><a href="index.html#services">Reactive maintenance</a><a href="index.html#services">Consumables</a><a href="index.html#services">Clinical support</a></div>
+      <div><p class="mono f-tag">MACHINES</p><a href="shop.html">Refurbished stock</a><a href="shop.html">Part exchange</a><a href="index.html#contact">Installation</a><a href="index.html#contact">Decommissioning</a></div>
+      <div><p class="mono f-tag">CONTACT</p><a href="tel:+447458390786">07458 390786</a><a href="mailto:service@medisthetics.co.uk">service@medisthetics.co.uk</a><span>UK &amp; international coverage</span><a href="admin.html" class="f-admin">Shop admin →</a></div>
+    </div>
+    <div class="container footer-bottom mono">
+      <span>© 2026 MEDISTHETICS LTD — REGISTERED IN ENGLAND &amp; WALES</span>
+      <span>DEGREE-QUALIFIED ENGINEERS · 8+ YEARS</span>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL / ENQUIRE MODAL -->
+  <div class="modal hidden" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="modal-box modal-wide">
+      <button class="modal-x" id="detail-close" aria-label="Close product dialog">✕</button>
+      <div class="detail-layout">
+        <div class="detail-img"><img id="detail-image" alt="" /></div>
+        <div class="detail-body">
+          <p class="mono section-tag"><span class="rule blue"></span><span id="detail-badge">REFURBISHED</span></p>
+          <h3 id="detail-title">Machine</h3>
+          <p id="detail-price" class="detail-price"></p>
+          <p id="detail-desc" class="detail-desc"></p>
+          <ul class="mono detail-points">
+            <li>— 3-MO PARTS WARRANTY</li>
+            <li>— PRICE INCL. VAT + DELIVERY</li>
+            <li>— SERVICE REPORT SUPPLIED</li>
+          </ul>
+          <form id="detail-form" aria-label="Machine enquiry">
+            <input required name="name" placeholder="Name" aria-label="Name" />
+            <input required name="contact" placeholder="Phone / email" aria-label="Phone or email" />
+            <button class="btn btn-navy" type="submit">Enquire about this machine</button>
+          </form>
+          <p class="mono form-note" id="detail-note"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

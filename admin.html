@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin — Manage Shop | medisthetics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">medi<span>sthetics</span><em>DELIVERING EXCELLENCE — ADMIN</em></a>
+      <div class="header-right" style="margin-left:auto">
+        <a class="btn btn-ghost btn-sm" style="color:var(--navy);border-color:var(--line)" href="shop.html">View shop</a>
+        <a class="btn btn-navy btn-sm" href="index.html">← Back to site</a>
+        <button id="logout" class="btn btn-ghost btn-sm hidden" style="color:var(--navy);border-color:var(--line)">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-wrap">
+    <section id="login-view" class="admin-card" style="max-width:520px">
+      <p class="mono section-tag"><span class="rule blue"></span>ADMIN</p>
+      <h2>Manage shop stock</h2>
+      <p class="sub">Demo password: <code>admin123</code> — change <code>ADMIN_PASSWORD</code> in <code>js/admin.js</code>.</p>
+      <form id="login-form">
+        <label>Password<input type="password" id="password" placeholder="Enter admin password" required /></label>
+        <button class="btn btn-navy" type="submit">Unlock admin</button>
+        <p class="mono form-note" id="login-note"></p>
+      </form>
+    </section>
+
+    <section id="admin-view" class="hidden">
+      <div class="admin-grid">
+        <div class="admin-card">
+          <p class="mono section-tag"><span class="rule blue"></span>ADD / EDIT</p>
+          <h2 id="form-title">Add machine</h2>
+          <p class="sub">Title, image &amp; price. Upload a file or paste an image URL.</p>
+          <form id="product-form">
+            <input type="hidden" id="f-id" />
+            <label>Title*<input id="f-title" required placeholder="e.g. Lynton Lasers Excelight" /></label>
+            <div class="row2">
+              <label>Price (£)*<input id="f-price" type="number" min="0" step="1" required placeholder="15000" /></label>
+              <label>Badge / tag<input id="f-badge" placeholder="e.g. Refurbished" /></label>
+            </div>
+            <label>Description<textarea id="f-desc" rows="4" placeholder="Condition, year, what's included, warranty…"></textarea></label>
+            <div class="row2">
+              <label>Image URL<input id="f-imageUrl" type="url" placeholder="https://…" /></label>
+              <label>Or upload image<input id="f-file" type="file" accept="image/*" /></label>
+            </div>
+            <label>Preview<img id="f-preview" class="img-preview" alt="Preview" /></label>
+            <div class="form-actions">
+              <button class="btn btn-navy" type="submit" id="save-btn">Add machine</button>
+              <button class="btn btn-ghost" style="color:var(--navy);border-color:var(--line)" type="button" id="reset-btn">Clear</button>
+            </div>
+            <p class="mono form-note" id="form-note"></p>
+          </form>
+        </div>
+
+        <div class="admin-card">
+          <p class="mono section-tag"><span class="rule blue"></span>LIVE STOCK</p>
+          <h2>Shop (<span id="count">0</span>)</h2>
+          <p class="sub">Saves instantly to this browser and appears on the landing page.</p>
+          <div class="admin-tools">
+            <input id="admin-search" type="search" placeholder="Search…" />
+            <button id="restore" class="btn btn-navy btn-sm">Restore defaults</button>
+            <button id="export" class="btn btn-navy btn-sm">Export JSON</button>
+          </div>
+          <div id="admin-list" class="admin-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
