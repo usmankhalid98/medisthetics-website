@@ -24,7 +24,7 @@ html{scroll-behavior:smooth;overflow-x:clip}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%}
 a{color:inherit}
-.container{max-width:1200px;margin:0 auto;padding:0 28px}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
 .hidden{display:none!important}
 .mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
 h1,h2,h3{letter-spacing:-.03em;line-height:1.02;margin:0}
@@ -49,9 +49,9 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
 .header-inner>*{min-width:0}
 .logo{min-width:0;overflow:hidden}
 .logo em{white-space:nowrap}
-.hamburger{display:none;border:0;background:var(--navy);color:#fff;padding:6px 10px;cursor:pointer;font-size:1rem;line-height:1;border-radius:3px;min-width:44px;min-height:44px;position:relative;z-index:70}
-.hamburger:hover{background:var(--navy-2)}
-.hamburger[aria-expanded="true"]{background:var(--blue)}
+.hamburger{display:none;background:#fff;border:1.5px solid var(--navy);color:var(--navy);padding:6px 10px;cursor:pointer;font-size:1.05rem;line-height:1;border-radius:10px;min-width:44px;min-height:44px;position:relative;z-index:70}
+.hamburger:hover{background:var(--navy);color:#fff}
+.hamburger[aria-expanded="true"]{background:var(--navy);color:#fff}
 @media(max-width:900px){
   .nav{position:fixed;top:0;right:0;bottom:0;width:min(280px,82vw);background:var(--navy);flex-direction:column;padding:90px 28px;transform:translateX(100%);transition:.25s;margin:0;z-index:60;gap:4px}  .nav.open{transform:none;box-shadow:-16px 0 40px rgba(10,33,57,.35)}
   .nav a{color:#fff}
@@ -211,13 +211,13 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
 
 /* Footer */
 .footer{background:var(--navy);color:#9fb0c9}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding:64px 0 48px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding:72px 0 56px}
 .f-brand p{font-size:.92rem;max-width:36ch}
-.f-tag{color:var(--tan);margin:0 0 14px}
-.footer-grid a{display:block;text-decoration:none;font-size:.92rem;margin-bottom:8px;color:#c6d2e6}
+.f-tag{color:var(--tan);margin:0 0 18px;font-size:.7rem;letter-spacing:.18em}
+.footer-grid a{display:block;text-decoration:none;font-size:.95rem;margin-bottom:12px;color:#c6d2e6}
 .footer-grid a:hover{color:#fff}
-.f-admin{margin-top:12px;color:var(--mint)!important;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em}
-.footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding:18px 0;color:#7d8fae}
+.f-admin{margin-top:16px;color:var(--mint)!important;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em}
+.footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding:22px 0;color:#7d8fae;font-size:.68rem}
 @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
 
@@ -325,7 +325,9 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
   .header-inner{gap:16px;padding:18px 0}
   .site-header .container{padding:0 32px}
   .footer .container{padding:0 32px}
-  .footer-grid{gap:44px}
+  .footer-grid{gap:0;padding:56px 0 36px}
+  .footer-grid>div{padding:26px 0;border-top:1px solid rgba(255,255,255,.1)}
+  .footer-grid>div:first-child{border-top:0;padding-top:0}
   .footer-grid a{margin-bottom:12px}
   .logo{font-size:1.5rem}
   .logo em{display:none}
@@ -361,8 +363,7 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
   .cta-side .btn{width:100%}
   .cta-btns{width:100%}
   .cta-line{font-size:.66rem;overflow-wrap:anywhere}
-  .footer-grid{padding:48px 0 32px}
-  .footer-bottom{padding:16px 0}
+  .footer-bottom{padding:20px 0}
   .modal{align-items:flex-start;overflow-y:auto;padding:12px}
   .modal-box{margin:auto;padding:24px 20px;max-height:calc(100dvh - 24px);overflow-y:auto}
   .modal-wide{padding:0}
