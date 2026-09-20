@@ -46,7 +46,7 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
 .nav a:hover{color:var(--blue-dark)}
 .nav-cta{display:none}
 .header-right{display:flex;align-items:center;gap:10px}
-.hamburger{display:none;border:0;background:var(--navy);color:#fff;padding:6px 10px;cursor:pointer;font-size:1rem;line-height:1;border-radius:6px;min-width:40px;min-height:40px;position:relative;z-index:70}
+.hamburger{display:none;border:0;background:var(--navy);color:#fff;padding:6px 10px;cursor:pointer;font-size:1rem;line-height:1;border-radius:3px;min-width:44px;min-height:44px;position:relative;z-index:70}
 .hamburger:hover{background:var(--navy-2)}
 .hamburger[aria-expanded="true"]{background:var(--blue)}
 @media(max-width:900px){
@@ -313,7 +313,7 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
   .pill{padding:12px 20px}
   .nav a{padding:12px 0;font-size:1.05rem}
   .btn-view,.btn{min-height:44px}
-  .hamburger{min-width:40px;min-height:40px}
+  .hamburger{min-width:44px;min-height:44px}
 }
 /* Phones */
 @media(max-width:560px){
