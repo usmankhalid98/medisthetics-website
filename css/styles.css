@@ -322,7 +322,11 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
 /* Phones */
 @media(max-width:560px){
   .container{padding:0 28px}
-  .header-inner{gap:16px;padding:16px 0}
+  .header-inner{gap:16px;padding:18px 0}
+  .site-header .container{padding:0 32px}
+  .footer .container{padding:0 32px}
+  .footer-grid{gap:44px}
+  .footer-grid a{margin-bottom:12px}
   .logo{font-size:1.5rem}
   .logo em{display:none}
   .header-right .btn{display:none}
