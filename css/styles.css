@@ -58,7 +58,7 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
   .nav a.active{color:var(--mint);border-bottom-color:var(--mint)}
   .header-right{margin-left:auto}
   .nav-cta{display:inline-flex!important;align-items:center;justify-content:center;background:var(--blue);border-radius:6px;padding:14px 20px!important;font-weight:700;margin-top:12px}
-  .logo em{display:none}
+  .site-header .logo em{display:none}
   .hamburger{display:block}
 }
 
@@ -330,7 +330,7 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
   .footer-grid>div:first-child{border-top:0;padding-top:0}
   .footer-grid a{margin-bottom:12px}
   .logo{font-size:1.5rem}
-  .logo em{display:none}
+  .site-header .logo em{display:none}
   .header-right .btn{display:none}
   .section{padding:60px 0}
   .hero{padding:52px 0 44px;background-size:52px 52px}
