@@ -17,7 +17,7 @@
   const dTitle = document.getElementById('detail-title');
   const dPrice = document.getElementById('detail-price');
   const dDesc = document.getElementById('detail-desc');
-  const dNote = document.getElementById('detail-note');
+  const dWhats = document.getElementById('detail-whatsapp');
 
   const FALLBACK = 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop';
 
@@ -156,8 +156,7 @@
     dTitle.textContent = current.title;
     dPrice.textContent = window.MediStore.gbp(current.price) + ' incl. VAT & delivery';
     dDesc.textContent = current.desc || 'Refurbished to manufacturer standard. Contact us for full spec & service history.';
-    dNote.textContent = '';
-    document.getElementById('detail-form').reset();
+    dWhats.href = 'https://wa.me/447458390786?text=' + encodeURIComponent(`Hi, I'm interested in the ${current.title} (${window.MediStore.gbp(current.price)}). Is it still available?`);
     modal.classList.remove('hidden');
     modalClose.focus();
     document.body.style.overflow = 'hidden';
@@ -177,12 +176,6 @@
   modal.addEventListener('click', (e) => { if (e.target === modal) closeDetail(); });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeDetail();
-  });
-
-  document.getElementById('detail-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    dNote.textContent = 'Thanks — enquiry noted (demo). Please also call 07458 390786 or use the contact form below.';
-    setTimeout(closeDetail, 1400);
   });
 
   const enquiryForm = document.getElementById('enquiry-form');

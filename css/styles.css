@@ -197,6 +197,9 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
 .cta-copy{max-width:640px}
 .contact-sub{margin:0;font-size:1rem;max-width:52ch;color:var(--navy)}
 .cta-side{display:grid;gap:10px;justify-items:end;text-align:right}
+.cta-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.btn-whatsapp{background:#fff;color:var(--navy)}
+.btn-whatsapp:hover{background:#EDF1F6}
 .cta-line{margin:0!important;color:var(--navy)!important}
 .cta-line a{color:inherit}
 @media(max-width:900px){.cta-inner{flex-direction:column;align-items:start;gap:28px}.cta-side{justify-items:start;text-align:left}}
@@ -349,6 +352,7 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
   .cta-inner{gap:24px}
   .cta-side{justify-items:stretch;text-align:left;width:100%}
   .cta-side .btn{width:100%}
+  .cta-btns{width:100%}
   .cta-line{font-size:.66rem;overflow-wrap:anywhere}
   .footer-grid{padding:48px 0 32px}
   .footer-bottom{padding:16px 0}
