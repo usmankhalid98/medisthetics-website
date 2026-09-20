@@ -317,9 +317,8 @@ h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800}
 }
 /* Phones */
 @media(max-width:560px){
-  .container{padding:0 18px}
-  .header-inner{gap:12px;padding:14px 0}
-  .site-header .container{padding:0 20px}
+  .container{padding:0 22px}
+  .header-inner{gap:16px;padding:16px 0}
   .logo{font-size:1.5rem}
   .logo em{display:none}
   .header-right .btn{display:none}
