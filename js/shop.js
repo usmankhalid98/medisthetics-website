@@ -19,7 +19,7 @@
   const dDesc = document.getElementById('detail-desc');
   const dWhats = document.getElementById('detail-whatsapp');
 
-  const FALLBACK = 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop';
+  const FALLBACK = 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop';
 
   let products = window.MediStore.load();
   let activeTag = 'All';

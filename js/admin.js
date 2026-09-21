@@ -6,7 +6,7 @@
 (function () {
   const DEMO_PASSWORD = 'admin123'; // local demo mode only
   const SESSION = 'medisthetics_admin_ok';
-  const FALLBACK_IMG = 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop';
+  const FALLBACK_IMG = 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop';
 
   const cloud = () => window.MediStore.cloudOn();
 
