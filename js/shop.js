@@ -221,4 +221,11 @@
 
   renderPills();
   render();
+  // Pull live stock when a cloud backend is configured (cache renders first).
+  try {
+    const maybe = window.MediStore.refresh();
+    if (maybe && typeof maybe.then === 'function') {
+      maybe.then((items) => { products = items; renderPills(); render(); }).catch(() => {});
+    }
+  } catch { /* offline — cached stock already rendered */ }
 })();

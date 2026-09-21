@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin — Manage Shop | medisthetics</title>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=12" />
+  <link rel="stylesheet" href="css/styles.css?v=13" />
 </head>
 <body>
   <header class="site-header">
@@ -23,9 +23,10 @@
     <section id="login-view" class="admin-card" style="max-width:520px">
       <p class="mono section-tag"><span class="rule blue"></span>ADMIN</p>
       <h2>Manage shop stock</h2>
-      <p class="sub">Demo password: <code>admin123</code> — change <code>ADMIN_PASSWORD</code> in <code>js/admin.js</code>.</p>
+      <p class="sub" id="login-hint">Sign in to manage stock.</p>
       <form id="login-form">
-        <label>Password<input type="password" id="password" placeholder="Enter admin password" required /></label>
+        <label id="email-row" class="hidden">Email<input type="email" id="email" placeholder="you@example.com" autocomplete="username" /></label>
+        <label>Password<input type="password" id="password" placeholder="Enter admin password" required autocomplete="current-password" /></label>
         <button class="btn btn-navy" type="submit">Unlock admin</button>
         <p class="mono form-note" id="login-note"></p>
       </form>
@@ -61,6 +62,7 @@
         <div class="admin-card">
           <p class="mono section-tag"><span class="rule blue"></span>LIVE STOCK</p>
           <h2>Shop (<span id="count">0</span>)</h2>
+          <p class="mono form-note" id="cloud-note"></p>
           <p class="sub">Saves instantly to this browser and appears on the landing page.</p>
           <div class="admin-tools">
             <input id="admin-search" type="search" placeholder="Search…" />
@@ -72,7 +74,9 @@
       </div>
     </section>
   </main>
-  <script src="js/store.js?v=12"></script>
-  <script src="js/admin.js?v=12"></script>
+  <script src="js/supabase-config.js?v=13"></script>
+  <script src="js/supabase.js?v=13"></script>
+  <script src="js/store.js?v=13"></script>
+  <script src="js/admin.js?v=13"></script>
 </body>
 </html>
