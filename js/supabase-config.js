@@ -4,6 +4,6 @@
    The anon key is SAFE to commit: database rules (schema.sql) let the
    public only READ products; writing needs an admin login. */
 window.MEDISUPABASE = {
-  url: '',
-  anonKey: ''
+  url: 'https://yfxsdpzvcybcdefyixyh.supabase.co',
+  anonKey: 'sb_publishable_qWSMZrl1ATjoIEU8wQb97Q_3pElRgru'
 };
