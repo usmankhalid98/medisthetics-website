@@ -13,7 +13,7 @@ Static website rebuild for **medisthetics.co.uk** using the brand PDF guidelines
 - `admin.html` — admin panel: add **title, image, price** (+ badge/description). Works in local demo mode out of the box; connect the Supabase backend below to share stock across all devices.
 
 **Content sourced from live site:**
-Home / About (mission, 3 degree engineers, 8+ years, cheaper than distributors, 24/7 support), Services (PPM, Reactive, Flash-lamp/Consumable, Tech support), Refurbished Machines (7 real listings + prices incl. VAT/delivery, warranty notes), Contact (07458 390786, HeyGoldie booking).
+Home / About (mission, 3 degree engineers, 8+ years, cheaper than distributors, 24/7 support), Services (PPM, Reactive, Flash-lamp/Consumable, Tech support), Refurbished Machines (7 real listings + prices incl. VAT/delivery, warranty notes), Contact (07458 390786 via call/WhatsApp).
 
 ## Run locally
 
