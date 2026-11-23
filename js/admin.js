@@ -44,10 +44,10 @@
   if (cloud()) {
     emailRow.classList.remove('hidden');
     document.getElementById('email').required = true;
-    loginHint.innerHTML = 'Signed-in admins only. Create your login in Supabase → Authentication → Users, then sign in here. Stock saves to the shared database.';
+    loginHint.textContent = 'Admin access — sign in to manage shop stock.';
     document.querySelector('#login-form button[type="submit"]').textContent = 'Sign in';
   } else {
-    loginHint.innerHTML = 'Demo password: <code>admin123</code> — change <code>DEMO_PASSWORD</code> in <code>js/admin.js</code>. Add a cloud backend later (see README) to share stock across devices.';
+    loginHint.textContent = 'Admin access — enter password to manage shop stock.';
   }
 
   document.getElementById('login-form').addEventListener('submit', async (e) => {
